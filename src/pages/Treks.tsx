@@ -349,11 +349,6 @@ const Treks = () => {
                     Fitness Guide
                   </Button>
                 </Link>
-                <Link to="/join" className="flex-1">
-                  <Button variant="accent" className="w-full">
-                    Join TAS
-                  </Button>
-                </Link>
               </div>
             </div>
           </div>

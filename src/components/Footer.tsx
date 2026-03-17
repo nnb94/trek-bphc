@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Instagram, Mail, Mountain, MapPin, Phone } from "lucide-react";
+import TASLogo from '../assets/TAS_logo.png'; 
 
 const Footer = () => {
   return (
@@ -10,7 +11,7 @@ const Footer = () => {
           <div className="space-y-4">
             <div className="flex items-center gap-3">
               <div className="w-12 h-12 rounded-xl bg-accent flex items-center justify-center">
-                <Mountain className="w-7 h-7 text-accent-foreground" />
+                <img src={TASLogo} alt="TAS Logo" className="w-full h-full object-cover rounded-xl" />
               </div>
               <div>
                 <h3 className="font-heading font-bold text-xl">TAS</h3>
@@ -74,7 +75,7 @@ const Footer = () => {
             </p>
             <div className="flex gap-3">
               <a
-                href="https://instagram.com/tas_bphc"
+                href="https://instagram.com/tas.bphc"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-lg bg-primary-foreground/10 flex items-center justify-center hover:bg-accent hover:text-accent-foreground transition-colors"
@@ -82,7 +83,7 @@ const Footer = () => {
                 <Instagram className="w-5 h-5" />
               </a>
               <a
-                href="mailto:tas@hyderabad.bits-pilani.ac.in"
+                href="mailto:tas@gmail.com"
                 className="w-10 h-10 rounded-lg bg-primary-foreground/10 flex items-center justify-center hover:bg-accent hover:text-accent-foreground transition-colors"
               >
                 <Mail className="w-5 h-5" />

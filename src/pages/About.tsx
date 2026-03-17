@@ -63,19 +63,18 @@ const About = () => {
             <div className="prose prose-lg max-w-none text-muted-foreground space-y-6">
               <p>
                 The <strong className="text-foreground">Trekking & Adventure Society (TAS)</strong> is the official 
-                adventure club of BITS Pilani, Hyderabad Campus. Founded with a vision to promote outdoor 
+                adventure society of BITS Pilani, Hyderabad Campus. Founded with a vision to promote outdoor 
                 activities, physical fitness, and a spirit of adventure among students, TAS has grown into 
-                one of the most active and respected societies on campus.
+                one of the most active societies on campus.
               </p>
               <p>
-                We organize a wide range of activities throughout the year—from local weekend hikes around 
-                Hyderabad's scenic landscapes to multi-day certified Himalayan expeditions. Our programs 
+                We organize a wide range of activities throughout the year, including treks and other adventure activities as well. Our programs 
                 are designed to be inclusive, welcoming beginners while also challenging experienced trekkers.
               </p>
               <p>
                 Beyond the mountains, TAS is about building character. We believe that the lessons learned 
                 on the trail—perseverance, teamwork, self-reliance, and respect for nature—translate into 
-                every aspect of life. Our members don't just become better trekkers; they become better individuals.
+                every aspect of life. We don't just become better trekkers; we become better individuals.
               </p>
             </div>
           </div>
@@ -147,24 +146,6 @@ const About = () => {
               </div>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="section-padding bg-primary text-primary-foreground">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="font-heading text-3xl md:text-4xl font-bold mb-6">
-            Ready to Start Your Adventure?
-          </h2>
-          <p className="text-primary-foreground/80 max-w-2xl mx-auto mb-8">
-            Join a community of passionate adventurers and discover what you're capable of.
-          </p>
-          <Link to="/join">
-            <Button variant="hero" size="xl" className="gap-2">
-              Join TAS Today
-              <ArrowRight className="w-5 h-5" />
-            </Button>
-          </Link>
         </div>
       </section>
 

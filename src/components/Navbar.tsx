@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, Mountain } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
+import TASLogo from '../assets/TAS_logo.png';
+
 
 const navLinks = [
   { name: "Home", path: "/" },
@@ -48,10 +49,7 @@ const Navbar = () => {
               "w-10 h-10 rounded-lg flex items-center justify-center transition-colors",
               scrolled ? "bg-primary" : "bg-cream/20 backdrop-blur-sm"
             )}>
-              <Mountain className={cn(
-                "w-6 h-6 transition-colors",
-                scrolled ? "text-primary-foreground" : "text-cream"
-              )} />
+              <img src={TASLogo} alt="TAS Logo" className="w-full h-full object-cover rounded-xl" />
             </div>
             <div className="flex flex-col">
               <span className={cn(
@@ -89,11 +87,6 @@ const Navbar = () => {
                 {link.name}
               </Link>
             ))}
-            <Link to="/join" className="ml-2">
-              <Button variant={scrolled ? "accent" : "hero"} size="sm">
-                Join TAS
-              </Button>
-            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -139,11 +132,6 @@ const Navbar = () => {
                 {link.name}
               </Link>
             ))}
-            <Link to="/join" className="mt-2">
-              <Button variant="hero" className="w-full">
-                Join TAS
-              </Button>
-            </Link>
           </div>
         </div>
       </div>

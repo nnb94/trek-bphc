@@ -8,9 +8,10 @@ import kedarkanthaImg from "@/assets/kedarkantha.jpg";
 import brahmatalImg from "@/assets/brahmatal.jpg";
 import valleyImg from "@/assets/valley-of-flowers.jpg";
 import hamptaImg from "@/assets/hampta-pass.jpg";
+import BITSLogo from "@/assets/BITS_Pilani-Logo.png";
 
 const Index = () => {
-  const featuredTreks = [
+  const featuredTreks = [ 
     {
       name: "Kedarkantha",
       image: kedarkanthaImg,
@@ -64,21 +65,12 @@ const Index = () => {
     },
   ];
 
-  const benefits = [
-    "Build physical and mental resilience",
-    "Develop leadership & teamwork skills",
-    "Experience certified Himalayan treks",
-    "Join a passionate alumni network",
-    "Access professional gear & guidance",
-    "Create lifelong memories",
-  ];
-
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-[110vh] pt-20 flex items-center justify-center overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: `url(${heroImage})` }}
@@ -88,7 +80,11 @@ const Index = () => {
         <div className="relative z-10 container mx-auto px-4 text-center">
           <div className="max-w-4xl mx-auto space-y-6 animate-fade-up">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-cream/10 backdrop-blur-sm border border-cream/20 text-cream text-sm font-medium">
-              <Mountain className="w-4 h-4" />
+              <img 
+                src={BITSLogo} 
+                alt="BITS Logo" 
+                className="w-5 h-5 object-cover rounded-full" 
+              />
               BITS Pilani Hyderabad Campus
             </div>
             
@@ -106,11 +102,6 @@ const Index = () => {
                 <Button variant="hero" size="xl" className="gap-2">
                   View Our Treks
                   <ArrowRight className="w-5 h-5" />
-                </Button>
-              </Link>
-              <Link to="/join">
-                <Button variant="hero-outline" size="xl">
-                  Join TAS
                 </Button>
               </Link>
             </div>
@@ -133,10 +124,9 @@ const Index = () => {
               Who We Are
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              The Trekking & Adventure Society (TAS) is the official adventure club of BITS Pilani, Hyderabad Campus. 
+              The Trekking & Adventure Society (TAS) is the official adventure society of BITS Pilani, Hyderabad Campus. 
               We're a community of outdoor enthusiasts dedicated to fostering a culture of trekking, fitness, and 
-              responsible adventure among students. From local weekend hikes to certified Himalayan expeditions, 
-              we help you discover the trekker within.
+              responsible adventure among students. Our goal is to help you discover the trekker within.
             </p>
             <Link to="/about">
               <Button variant="outline" className="gap-2 mt-4">
@@ -144,40 +134,6 @@ const Index = () => {
                 <ArrowRight className="w-4 h-4" />
               </Button>
             </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* What We Do */}
-      <section className="section-padding bg-muted">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground mb-4">
-              What We Do
-            </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              From challenging Himalayan expeditions to skill-building workshops, we offer diverse experiences for every adventure seeker.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {activities.map((activity, index) => (
-              <div
-                key={activity.title}
-                className="bg-card rounded-2xl p-6 card-elevated card-hover"
-                style={{ animationDelay: `${index * 100}ms` }}
-              >
-                <div className="w-14 h-14 rounded-xl bg-accent/10 flex items-center justify-center mb-4">
-                  <activity.icon className="w-7 h-7 text-accent" />
-                </div>
-                <h3 className="font-heading font-semibold text-lg text-foreground mb-2">
-                  {activity.title}
-                </h3>
-                <p className="text-muted-foreground text-sm">
-                  {activity.description}
-                </p>
-              </div>
-            ))}
           </div>
         </div>
       </section>
@@ -240,62 +196,6 @@ const Index = () => {
                 </div>
               </Link>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Why Join TAS */}
-      <section className="section-padding bg-primary text-primary-foreground">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="font-heading text-3xl md:text-4xl font-bold mb-6">
-                Why Join TAS?
-              </h2>
-              <p className="text-primary-foreground/80 text-lg mb-8">
-                Being part of TAS is more than just trekking—it's about personal growth, 
-                building lasting friendships, and pushing your limits in the great outdoors.
-              </p>
-              <ul className="space-y-4">
-                {benefits.map((benefit, index) => (
-                  <li key={index} className="flex items-center gap-3">
-                    <div className="w-6 h-6 rounded-full bg-accent flex items-center justify-center flex-shrink-0">
-                      <svg className="w-3 h-3 text-accent-foreground" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
-                      </svg>
-                    </div>
-                    <span className="text-primary-foreground/90">{benefit}</span>
-                  </li>
-                ))}
-              </ul>
-              <Link to="/join" className="inline-block mt-8">
-                <Button variant="hero" size="lg" className="gap-2">
-                  Become a Member
-                  <ArrowRight className="w-5 h-5" />
-                </Button>
-              </Link>
-            </div>
-            
-            <div className="relative">
-              <div className="aspect-square rounded-3xl overflow-hidden card-elevated">
-                <img
-                  src={kedarkanthaImg}
-                  alt="TAS members on a trek"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="absolute -bottom-6 -left-6 bg-accent rounded-2xl p-6 card-elevated">
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-accent-foreground/20 flex items-center justify-center">
-                    <Calendar className="w-6 h-6 text-accent-foreground" />
-                  </div>
-                  <div>
-                    <p className="text-accent-foreground/70 text-sm">Next Trek</p>
-                    <p className="text-accent-foreground font-heading font-bold">Winter 2025</p>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </section>

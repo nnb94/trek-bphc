@@ -125,11 +125,6 @@ const Team = () => {
             We're always looking for passionate individuals to join our team. Whether you want to lead treks, 
             manage logistics, or capture memories through media—there's a place for you in TAS.
           </p>
-          <a href="/join" className="inline-flex">
-            <button className="px-8 py-4 bg-accent text-accent-foreground rounded-lg font-heading font-semibold hover:bg-accent/90 transition-colors">
-              Apply to Join TAS
-            </button>
-          </a>
         </div>
       </section>
 

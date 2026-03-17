@@ -15,28 +15,22 @@ import forestImg from "@/assets/forest-trek.jpg";
 interface GalleryImage {
   src: string;
   alt: string;
-  category: "Treks" | "Training" | "Campus";
 }
 
 const galleryImages: GalleryImage[] = [
-  { src: heroImg, alt: "Himalayan trek group", category: "Treks" },
-  { src: kedarkanthaImg, alt: "Kedarkantha summit", category: "Treks" },
-  { src: brahmatalImg, alt: "Brahmatal frozen lake", category: "Treks" },
-  { src: valleyImg, alt: "Valley of Flowers", category: "Treks" },
-  { src: hamptaImg, alt: "Hampta Pass crossing", category: "Treks" },
-  { src: sarPassImg, alt: "Sar Pass meadows", category: "Treks" },
-  { src: kuariImg, alt: "Kuari Pass panorama", category: "Treks" },
-  { src: bhriguImg, alt: "Bhrigu Lake", category: "Treks" },
-  { src: forestImg, alt: "Forest trail training", category: "Training" },
+  { src: heroImg, alt: "Himalayan trek group" },
+  { src: kedarkanthaImg, alt: "Kedarkantha summit" },
+  { src: brahmatalImg, alt: "Brahmatal frozen lake" },
+  { src: valleyImg, alt: "Valley of Flowers" },
+  { src: hamptaImg, alt: "Hampta Pass crossing" },
+  { src: sarPassImg, alt: "Sar Pass meadows" },
+  { src: kuariImg, alt: "Kuari Pass panorama" },
+  { src: bhriguImg, alt: "Bhrigu Lake" },
+  { src: forestImg, alt: "Forest trail training" },
 ];
 
 const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState<GalleryImage | null>(null);
-  const [filter, setFilter] = useState<string>("all");
-
-  const filteredImages = filter === "all"
-    ? galleryImages
-    : galleryImages.filter(img => img.category === filter);
 
   return (
     <div className="min-h-screen bg-background">
@@ -62,32 +56,11 @@ const Gallery = () => {
         </div>
       </section>
 
-      {/* Filters */}
-      <section className="py-8 bg-muted border-b border-border">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-wrap items-center justify-center gap-3">
-            {["all", "Treks", "Training", "Campus"].map((option) => (
-              <button
-                key={option}
-                onClick={() => setFilter(option)}
-                className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
-                  filter === option
-                    ? "bg-primary text-primary-foreground"
-                    : "bg-background text-muted-foreground hover:text-foreground"
-                }`}
-              >
-                {option === "all" ? "All Photos" : option}
-              </button>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Gallery Grid */}
       <section className="section-padding bg-background">
         <div className="container mx-auto px-4">
           <div className="columns-1 sm:columns-2 lg:columns-3 gap-4 space-y-4">
-            {filteredImages.map((image, index) => (
+            {galleryImages.map((image, index) => (
               <div
                 key={index}
                 className="break-inside-avoid cursor-pointer group relative overflow-hidden rounded-xl"
@@ -101,10 +74,7 @@ const Gallery = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-forest/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <div className="absolute bottom-4 left-4 right-4">
-                    <span className="px-3 py-1 rounded-full bg-accent/90 text-accent-foreground text-xs font-medium">
-                      {image.category}
-                    </span>
-                    <p className="text-cream text-sm mt-2">{image.alt}</p>
+                    <p className="text-cream text-sm">{image.alt}</p>
                   </div>
                 </div>
               </div>
@@ -136,10 +106,7 @@ const Gallery = () => {
               className="max-w-full max-h-[85vh] object-contain rounded-lg"
             />
             <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-foreground/80 to-transparent rounded-b-lg">
-              <span className="px-3 py-1 rounded-full bg-accent text-accent-foreground text-xs font-medium">
-                {selectedImage.category}
-              </span>
-              <p className="text-cream mt-2">{selectedImage.alt}</p>
+              <p className="text-cream">{selectedImage.alt}</p>
             </div>
           </div>
         </div>

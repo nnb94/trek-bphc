@@ -2,15 +2,13 @@ import { useState } from "react";
 import { X } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import heroImg from "@/assets/hero-mountains.jpg";
-import kedarkanthaImg from "@/assets/kedarkantha.jpg";
+import kedarkanthaImg from "@/assets/kedarkantha.jpeg";
 import brahmatalImg from "@/assets/brahmatal.jpg";
-import valleyImg from "@/assets/valley-of-flowers.jpg";
+import valleyImg from "@/assets/valley-of-flowers.jpeg";
 import hamptaImg from "@/assets/hampta-pass.jpg";
 import sarPassImg from "@/assets/sar-pass.jpg";
 import kuariImg from "@/assets/kuari-pass.jpg";
-import bhriguImg from "@/assets/bhrigu-lake.jpg";
-import forestImg from "@/assets/forest-trek.jpg";
+import bhriguImg from "@/assets/bhrigu-lake.jpeg";
 
 interface GalleryImage {
   src: string;
@@ -18,7 +16,6 @@ interface GalleryImage {
 }
 
 const galleryImages: GalleryImage[] = [
-  { src: heroImg, alt: "Himalayan trek group" },
   { src: kedarkanthaImg, alt: "Kedarkantha summit" },
   { src: brahmatalImg, alt: "Brahmatal frozen lake" },
   { src: valleyImg, alt: "Valley of Flowers" },
@@ -26,38 +23,17 @@ const galleryImages: GalleryImage[] = [
   { src: sarPassImg, alt: "Sar Pass meadows" },
   { src: kuariImg, alt: "Kuari Pass panorama" },
   { src: bhriguImg, alt: "Bhrigu Lake" },
-  { src: forestImg, alt: "Forest trail training" },
 ];
 
 const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState<GalleryImage | null>(null);
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-[#dfc9b0] dark:bg-[#3b2f23]">
       <Navbar />
 
-      {/* Hero Section */}
-      <section className="relative min-h-[50vh] flex items-center justify-center overflow-hidden">
-        <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url(${heroImg})` }}
-        />
-        <div className="absolute inset-0 hero-overlay" />
-        
-        <div className="relative z-10 container mx-auto px-4 text-center pt-20">
-          <div className="max-w-3xl mx-auto space-y-6 animate-fade-up">
-            <h1 className="font-heading text-4xl md:text-6xl font-bold text-cream">
-              Gallery
-            </h1>
-            <p className="text-xl text-cream/80">
-              Moments from our adventures
-            </p>
-          </div>
-        </div>
-      </section>
-
       {/* Gallery Grid */}
-      <section className="section-padding bg-background">
+      <section className="section-padding bg-transparent">
         <div className="container mx-auto px-4">
           <div className="columns-1 sm:columns-2 lg:columns-3 gap-4 space-y-4">
             {galleryImages.map((image, index) => (

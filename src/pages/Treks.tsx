@@ -5,13 +5,13 @@ import { MapPin, TrendingUp, Clock, Calendar, Mountain, ChevronRight, X } from "
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import heroImg from "@/assets/hero-mountains.jpg";
-import kedarkanthaImg from "@/assets/kedarkantha.jpg";
+import kedarkanthaImg from "@/assets/kedarkantha.jpeg";
 import brahmatalImg from "@/assets/brahmatal.jpg";
-import valleyImg from "@/assets/valley-of-flowers.jpg";
+import valleyImg from "@/assets/valley-of-flowers.jpeg";
 import hamptaImg from "@/assets/hampta-pass.jpg";
 import sarPassImg from "@/assets/sar-pass.jpg";
 import kuariImg from "@/assets/kuari-pass.jpg";
-import bhriguImg from "@/assets/bhrigu-lake.jpg";
+import bhriguImg from "@/assets/bhrigu-lake.jpeg";
 
 interface Trek {
   id: string;

@@ -6,11 +6,11 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import heroImg from "@/assets/hero-mountains.jpg";
 import kedarkanthaImg from "@/assets/kedarkantha.jpeg";
-import brahmatalImg from "@/assets/brahmatal.jpg";
+import brahmatalImg from "@/assets/brahmatal.jpeg";
 import valleyImg from "@/assets/valley-of-flowers.jpeg";
 import hamptaImg from "@/assets/hampta-pass.jpg";
 import sarPassImg from "@/assets/sar-pass.jpg";
-import kuariImg from "@/assets/kuari-pass.jpg";
+import kuariImg from "@/assets/kuari-pass.png";
 import bhriguImg from "@/assets/bhrigu-lake.jpeg";
 
 interface Trek {

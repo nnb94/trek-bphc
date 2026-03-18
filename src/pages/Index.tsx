@@ -5,7 +5,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import heroImage from "@/assets/hero-mountains.jpg";
 import kedarkanthaImg from "@/assets/kedarkantha.jpeg";
-import brahmatalImg from "@/assets/brahmatal.jpg";
+import brahmatalImg from "@/assets/brahmatal.jpeg";
 import valleyImg from "@/assets/valley-of-flowers.jpeg";
 import hamptaImg from "@/assets/hampta-pass.jpg";
 import BITSLogo from "@/assets/BITS_Pilani-Logo.png";
@@ -147,7 +147,7 @@ const Index = () => {
                 Featured Treks
               </h2>
               <p className="text-muted-foreground">
-                Discover the adventures that await you
+                Take a look at some of our previous treks.
               </p>
             </div>
             <Link to="/treks">

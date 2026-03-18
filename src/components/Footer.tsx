@@ -52,8 +52,8 @@ const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-center gap-3 text-sm text-primary-foreground/70">
                 <Mail className="w-4 h-4 text-accent" />
-                <a href="mailto:tas@hyderabad.bits-pilani.ac.in" className="hover:text-accent transition-colors">
-                  tas@hyderabad.bits-pilani.ac.in
+                <a href="mailto:tas@gmail.com" className="hover:text-accent transition-colors">
+                  tas@gmail.com
                 </a>
               </li>
               <li className="flex items-start gap-3 text-sm text-primary-foreground/70">

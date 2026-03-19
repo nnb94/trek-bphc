@@ -9,7 +9,7 @@ import kedarkanthaImg from "@/assets/kedarkantha.jpeg";
 import brahmatalImg from "@/assets/brahmatal.jpeg";
 import valleyImg from "@/assets/valley-of-flowers.jpeg";
 import hamptaImg from "@/assets/hampta-pass.jpg";
-import sarPassImg from "@/assets/sar-pass.jpg";
+import sarPassImg from "@/assets/sar/sar4.jpeg";
 import kuariImg from "@/assets/kuari-pass.png";
 import bhriguImg from "@/assets/bhrigu-lake.jpeg";
 

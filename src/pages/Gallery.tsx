@@ -46,11 +46,12 @@ import hamptaImg3 from "@/assets/hampta/hampta3.jpg";
 import hamptaImg4 from "@/assets/hampta/hampta4.jpg";
 import hamptaImg5 from "@/assets/hampta/hampta5.jpg";
 import hamptaImg6 from "@/assets/hampta/hampta6.jpg";
-import sarPassImg from "@/assets/sar-pass.jpg";
-import sarPassImg1 from "@/assets/sar/sar1.jpeg";
+import hamptaImg7 from "@/assets/hampta/hampta7.jpg";
+
+import sarPassImg1 from "@/assets/sar/sar4.jpeg";
 import sarPassImg2 from "@/assets/sar/sar2.jpeg";
 import sarPassImg3 from "@/assets/sar/sar3.jpeg";
-import sarPassImg4 from "@/assets/sar/sar4.jpeg";
+import sarPassImg4 from "@/assets/sar/sar1.jpeg";
 import sarPassImg5 from "@/assets/sar/sar5.jpeg";
 import sarPassImg6 from "@/assets/sar/sar6.jpeg";
 import sarPassImg7 from "@/assets/sar/sar7.jpeg";
@@ -58,6 +59,11 @@ import sarPassImg8 from "@/assets/sar/sar8.jpeg";
 import sarPassImg9 from "@/assets/sar/sar9.jpeg";
 import sarPassImg10 from "@/assets/sar/sar10.png";
 import kuariImg from "@/assets/kuari-pass.png";
+import kuariImg1 from "@/assets/kuari/kuari1.jpg";
+import kuariImg2 from "@/assets/kuari/kuari2.jpg";
+import kuariImg3 from "@/assets/kuari/kuari3.jpg";
+import kuariImg4 from "@/assets/kuari/kuari4.jpg";
+import kuariImg5 from "@/assets/kuari/kuari5.jpg";
 import bhriguImg from "@/assets/bhrigu-lake.jpeg";
 import bhriguImg1 from "@/assets/bhrigu/bhrigu1.jpeg";
 import bhriguImg2 from "@/assets/bhrigu/bhrigu2.jpeg";
@@ -91,20 +97,26 @@ const trekGalleries: TrekGallery[] = [
   },
   {
     name: "Kuari Pass",
-    images: [{ src: kuariImg, alt: "Kuari Pass summit" }],
+    images: [{ src: kuariImg, alt: "Kuari Pass summit" },
+            { src: kuariImg1, alt: "Kuari Pass summit" },
+            { src: kuariImg2, alt: "Kuari Pass summit" },
+            { src: kuariImg3, alt: "Kuari Pass summit" },
+            { src: kuariImg4, alt: "Kuari Pass summit" },
+            { src: kuariImg5, alt: "Kuari Pass summit" },
+    ],
   },
   {
     name: "Bhrigu Lake",
     images: [
       { src: bhriguImg, alt: "Bhrigu Lake" },
-      { src: bhriguImg1, alt: "Bhrigu Lake" },
-      { src: bhriguImg2, alt: "Bhrigu Lake" },
-      { src: bhriguImg3, alt: "Bhrigu Lake" },
-      { src: bhriguImg4, alt: "Bhrigu Lake" },
-      { src: bhriguImg5, alt: "Bhrigu Lake" },
-      { src: bhriguImg6, alt: "Bhrigu Lake" },
-      { src: bhriguImg7, alt: "Bhrigu Lake" },
-      { src: bhriguImg8, alt: "Bhrigu Lake" }
+      { src: bhriguImg1, alt: "Snow at the top" },
+      { src: bhriguImg2, alt: "Stream before the suummit" },
+      { src: bhriguImg3, alt: "Flowers" },
+      { src: bhriguImg4, alt: "Meadows" },
+      { src: bhriguImg5, alt: "View from the meadows" },
+      { src: bhriguImg6, alt: "View from the meadows" },
+      { src: bhriguImg7, alt: "View from the meadows" },
+      { src: bhriguImg8, alt: "View near the summit" }
     ],
   },
   {
@@ -113,63 +125,64 @@ const trekGalleries: TrekGallery[] = [
               { src: valleyImg1, alt: "Valley of Flowers" },
               { src: valleyImg2, alt: "Valley of Flowers" },
               { src: valleyImg3, alt: "Valley of Flowers" },
-              { src: valleyImg4, alt: "Valley of Flowers" },
-              { src: valleyImg5, alt: "Valley of Flowers" },
-              { src: valleyImg6, alt: "Valley of Flowers" },
-              { src: valleyImg7, alt: "Valley of Flowers" },
-              { src: valleyImg8, alt: "Valley of Flowers" },
-              { src: valleyImg9, alt: "Valley of Flowers" },
-              { src: valleyImg10, alt: "Valley of Flowers" },
-              { src: valleyImg11, alt: "Valley of Flowers" },
-              { src: valleyImg12, alt: "Valley of Flowers" },
-              { src: valleyImg13, alt: "Valley of Flowers" },
-              { src: valleyImg14, alt: "Valley of Flowers" },
-              { src: valleyImg15, alt: "Valley of Flowers" },
-              { src: valleyImg16, alt: "Valley of Flowers" },
-              { src: valleyImg17, alt: "Valley of Flowers" },
-              { src: valleyImg18, alt: "Valley of Flowers" },
-              { src: valleyImg19, alt: "Valley of Flowers" },
+              { src: valleyImg4, alt: "Khunt Khal Glacier" },
+              { src: valleyImg5, alt: "Waterfall enroute to Hemkund" },
+              { src: valleyImg6, alt: "View from the route to Hemkund" },
+              { src: valleyImg7, alt: "Valley of Flowers Map" },
+              { src: valleyImg8, alt: "Flowers in the valley" },
+              { src: valleyImg9, alt: "Flowers in the valley" },
+              { src: valleyImg10, alt: "Flowers in the valley" },
+              { src: valleyImg11, alt: "Flowers in the valley" },
+              { src: valleyImg12, alt: "Flowers in the valley" },
+              { src: valleyImg13, alt: "Flowers in the valley" },
+              { src: valleyImg14, alt: "Flowers in the valley" },
+              { src: valleyImg15, alt: "Flowers in the valley" },
+              { src: valleyImg16, alt: "Flowers in the valley" },
+              { src: valleyImg17, alt: "Flowers in the valley" },
+              { src: valleyImg18, alt: "Hemkund Lake" },
+              { src: valleyImg19, alt: "Hemkund Sahib Gurudwara" },
     ],
   },
   {
     name: "Hampta Pass",
-    images: [{ src: hamptaImg, alt: "Hampta Pass crossing" },
-            { src: hamptaImg1, alt: "Hampta Pass crossing" },
-            { src: hamptaImg2, alt: "Hampta Pass crossing" },
-            { src: hamptaImg3, alt: "Hampta Pass crossing" },
+    images: [{ src: hamptaImg, alt: "Hampta Pass" },
+            { src: hamptaImg1, alt: "Hampta Pass" },
+            { src: hamptaImg2, alt: "Briefing" },
+            { src: hamptaImg3, alt: "Tents" },
             { src: hamptaImg4, alt: "Hampta Pass crossing" },
-            { src: hamptaImg5, alt: "Hampta Pass crossing" },
-            { src: hamptaImg6, alt: "Hampta Pass crossing" }
+            { src: hamptaImg5, alt: "Stream" },
+            { src: hamptaImg6, alt: "Hampta Pass summit" },
+            { src: hamptaImg7, alt: "Meadows" },
     ],
   },
   {
     name: "Brahmatal",
     images: [{ src: brahmatalImg, alt: "Brahmatal view" },
-      { src: brahmatalImg1, alt: "Brahmatal view" },
-      { src: brahmatalImg2, alt: "Brahmatal view" },
-      { src: brahmatalImg3, alt: "Brahmatal view" },
-      { src: brahmatalImg4, alt: "Brahmatal view" },
+      { src: brahmatalImg1, alt: "Snow" },
+      { src: brahmatalImg2, alt: "Brahmatal trek route" },
+      { src: brahmatalImg3, alt: "Brahmatal campsite" },
+      { src: brahmatalImg4, alt: "Brahmatal campsite" },
       { src: brahmatalImg5, alt: "Brahmatal view" },
       { src: brahmatalImg6, alt: "Brahmatal view" },
       { src: brahmatalImg7, alt: "Brahmatal view" },
       { src: brahmatalImg8, alt: "Brahmatal view" },
-      { src: brahmatalImg9, alt: "Brahmatal view" },
-      { src: brahmatalImg10, alt: "Brahmatal view" },
+      { src: brahmatalImg9, alt: "Brahmatal summit area" },
+      { src: brahmatalImg10, alt: "Brahmatal trek route" },
     ],
   },
   {
     name: "Sar Pass",
-    images: [{ src: sarPassImg, alt: "Sar Pass meadows" },
-            { src: sarPassImg1, alt: "Sar Pass meadows" },
-            { src: sarPassImg2, alt: "Sar Pass meadows" },
-            { src: sarPassImg3, alt: "Sar Pass meadows" },
-            { src: sarPassImg4, alt: "Sar Pass meadows" },
-            { src: sarPassImg5, alt: "Sar Pass meadows" },
+    images: [
+            { src: sarPassImg1, alt: "Sar Pass" },
+            { src: sarPassImg2, alt: "Furball" },
+            { src: sarPassImg3, alt: "Sar Pass view" },
+            { src: sarPassImg4, alt: "Sar Pass view" },
+            { src: sarPassImg5, alt: "Sar Pass view" },
             { src: sarPassImg6, alt: "Sar Pass meadows" },
-            { src: sarPassImg7, alt: "Sar Pass meadows" },
-            { src: sarPassImg8, alt: "Sar Pass meadows" },
+            { src: sarPassImg7, alt: "Sar Pass campsite" },
+            { src: sarPassImg8, alt: "Sar Pass campsite" },
             { src: sarPassImg9, alt: "Sar Pass meadows" },
-            { src: sarPassImg10, alt: "Sar Pass meadows" },
+            { src: sarPassImg10, alt: "Sar Pass view" },
     ],
   },
 ];
@@ -282,7 +295,7 @@ const Gallery = () => {
           onClick={closeLightbox}
         >
           <div
-            className="relative max-h-[90vh] max-w-[90vw]"
+            className="relative flex flex-col items-center justify-center max-h-[90vh] max-w-[90vw]"
             onClick={(e) => e.stopPropagation()}
           >
             <button
@@ -295,7 +308,7 @@ const Gallery = () => {
             <img
               src={lightboxImage.src}
               alt={lightboxImage.alt}
-              className="h-auto w-full rounded-lg object-contain"
+              className="max-h-[80vh] max-w-[90vw] w-auto h-auto rounded-lg object-contain"
             />
             <p className="mt-2 text-center text-sm text-cream">
               {lightboxImage.alt}

@@ -33,6 +33,7 @@ The project supports both **npm** and **bun**.
 - Node.js installed  
 - Bun *(optional but recommended)*  
 
+
 ---
 
 ### 📦 Clone the Repository
@@ -40,3 +41,27 @@ The project supports both **npm** and **bun**.
 ```bash
 git clone https://github.com/nnb94/trek-bphc.git
 cd trek-bphc
+```
+## 📥 Install Dependencies
+
+**Using Bun:**
+```bash
+bun install
+```
+
+**Using npm:**
+```bash
+npm install
+```
+
+## ▶️ Run the Development Server
+
+**Using Bun:**
+```bash
+bun run dev
+```
+
+**Using npm:**
+```bash
+npm run dev
+```

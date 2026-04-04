@@ -18,7 +18,7 @@ interface Trek {
   name: string;
   image: string;
   location: string;
-  difficulty: "Easy" | "Moderate" | "Difficult";
+  difficulty: "Easy" | "Easy-Moderate" | "Moderate" | "Difficult";
   altitude: string;
   duration: string;
   season: string;
@@ -34,42 +34,42 @@ const treks: Trek[] = [
     name: "Kedarkantha",
     image: kedarkanthaImg,
     location: "Uttarakhand",
-    difficulty: "Moderate",
+    difficulty: "Easy-Moderate",
     altitude: "12,500 ft",
     duration: "6 Days",
     season: "Dec - Apr",
     description: "Kedarkantha is one of the most popular winter treks in India, offering stunning views of snow-capped Himalayan peaks. The trek takes you through beautiful pine forests, quaint villages, and pristine campsites before the summit push.",
     highlights: ["360° summit views", "Snow camping", "Pine forests", "Village trails"],
-    fitnessLevel: "Moderate fitness required. Should be able to walk 6-8 km per day with a backpack.",
-    yearConducted: "2023, 2024",
+    fitnessLevel: "Beginner friendly. Basic fitness sufficient.",
+    yearConducted: "2024, 2025",
   },
   {
     id: "brahmatal",
     name: "Brahmatal",
     image: brahmatalImg,
     location: "Uttarakhand",
-    difficulty: "Moderate",
+    difficulty: "Easy-Moderate",
     altitude: "12,250 ft",
     duration: "6 Days",
     season: "Dec - Mar",
     description: "Brahmatal offers spectacular views of Mt. Trishul and Mt. Nanda Ghunti. The frozen Brahmatal lake at the summit is a mesmerizing sight, making this one of the most scenic winter treks.",
     highlights: ["Frozen lake", "Mt. Trishul views", "Alpine meadows", "Pristine snow trails"],
-    fitnessLevel: "Moderate fitness required. Regular cardio training recommended.",
-    yearConducted: "2024",
+    fitnessLevel: "Beginner friendly. Basic fitness sufficient.",
+    yearConducted: "2023",
   },
   {
     id: "valley-of-flowers",
     name: "Valley of Flowers",
     image: valleyImg,
     location: "Uttarakhand",
-    difficulty: "Easy",
+    difficulty: "Easy-Moderate",
     altitude: "14,100 ft",
     duration: "6 Days",
     season: "Jul - Sep",
     description: "A UNESCO World Heritage Site, the Valley of Flowers is a botanical paradise with over 600 species of flowering plants. Combined with the spiritual Hemkund Sahib, this trek is a visual and cultural feast.",
     highlights: ["UNESCO World Heritage", "600+ flower species", "Hemkund Sahib", "Gentle trails"],
     fitnessLevel: "Beginner friendly. Basic fitness sufficient.",
-    yearConducted: "2023",
+    yearConducted: "2025",
   },
   {
     id: "hampta-pass",
@@ -82,7 +82,7 @@ const treks: Trek[] = [
     season: "Jun - Oct",
     description: "Hampta Pass is known for its dramatic landscape transition—from the lush green Kullu valley to the barren Spiti desert. The river crossings and the stunning Chandratal lake make this trek unforgettable.",
     highlights: ["Landscape contrast", "River crossings", "Chandratal lake", "Dramatic views"],
-    fitnessLevel: "Moderate fitness. River crossing experience helpful but not required.",
+    fitnessLevel: "Moderate fitness required.",
     yearConducted: "2024",
   },
   {
@@ -96,34 +96,36 @@ const treks: Trek[] = [
     season: "Apr - Jun, Sep - Nov",
     description: "Sar Pass takes you through dense forests of pine and oak, open meadows, and offers the unique experience of snow sliding. The trek provides excellent views of the Parvati valley.",
     highlights: ["Snow sliding", "Pine forests", "Parvati valley views", "Scenic meadows"],
-    fitnessLevel: "Moderate fitness required. Snow experience is a plus.",
+    fitnessLevel: "Moderate fitness required.",
+    yearConducted: "2023",
   },
   {
     id: "kuari-pass",
     name: "Kuari Pass",
     image: kuariImg,
     location: "Uttarakhand",
-    difficulty: "Moderate",
+    difficulty: "Easy-Moderate",
     altitude: "12,516 ft",
     duration: "6 Days",
     season: "Mar - Jun, Sep - Nov",
     description: "Also known as the Curzon Trail, Kuari Pass offers panoramic views of major Himalayan peaks including Nanda Devi, Dronagiri, and Kamet. The trek passes through pristine oak and rhododendron forests.",
     highlights: ["Nanda Devi views", "Curzon Trail", "Oak forests", "Rhododendron blooms"],
-    fitnessLevel: "Moderate fitness. Good for first-time Himalayan trekkers.",
+    fitnessLevel: "Beginner friendly. Basic fitness sufficient.",
+    yearConducted: "2025, 2026",
   },
   {
     id: "bhrigu-lake",
     name: "Bhrigu Lake",
     image: bhriguImg,
     location: "Himachal Pradesh",
-    difficulty: "Moderate",
+    difficulty: "Easy-Moderate",
     altitude: "14,100 ft",
     duration: "4 Days",
     season: "May - Oct",
     description: "Bhrigu Lake is a high-altitude glacial lake associated with the sage Bhrigu. The trek offers stunning views of the Pir Panjal range and the pristine blue-green waters of the sacred lake.",
     highlights: ["Sacred lake", "Pir Panjal views", "Short duration", "Glacial landscape"],
-    fitnessLevel: "Moderate to good fitness. Steep sections require stamina.",
-    yearConducted: "2023",
+    fitnessLevel: "Beginner friendly. Basic fitness sufficient.",
+    yearConducted: "2025",
   },
 ];
 
@@ -164,7 +166,7 @@ const Treks = () => {
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap items-center justify-center gap-3">
             <span className="text-sm text-muted-foreground mr-2">Filter by difficulty:</span>
-            {["all", "Easy", "Moderate", "Difficult"].map((option) => (
+            {["all", "Easy-Moderate", "Moderate"].map((option) => (
               <button
                 key={option}
                 onClick={() => setFilter(option)}

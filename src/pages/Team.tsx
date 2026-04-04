@@ -1,27 +1,48 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { User, Crown, Mountain, Camera, Package, Megaphone, Dumbbell } from "lucide-react";
 import heroImg from "@/assets/hero-mountains.jpg";
+import nirvanPhoto from "@/assets/team/nirvan.jpeg";
+import vishPhoto from "@/assets/team/vishesh.jpeg";
+import bhavitPhoto from "@/assets/team/bhavit.jpeg";
+import defaultPhoto from "@/assets/team/default.avif";
+import brundaPhoto from "@/assets/team/brunda.jpeg";
+import nishantPhoto from "@/assets/team/nishant.jpeg";
+import saumPhoto from "@/assets/team/saum.jpeg";
+import kanishkPhoto from "@/assets/team/kanishk.jpeg";
+import ojasviPhoto from "@/assets/team/ojasvi.jpeg";
+import mihirPhoto from "@/assets/team/mihir.jpeg";
+import arnavPhoto from "@/assets/team/arnav.jpeg";
+import harshPhoto from "@/assets/team/harsh.jpeg";
+import paramPhoto from "@/assets/team/param.jpeg";
+import vaishnaviPhoto from "@/assets/team/vaishnavi.jpeg";
 
 interface TeamMember {
   name: string;
   role: string;
   team?: string;
-  icon: React.ElementType;
+  photo: string;
 }
 
+
 const coreTeam: TeamMember[] = [
-  { name: "President", role: "President", icon: Crown },
-  { name: "Trek Lead 1", role: "Trek Leader", icon: Mountain },
-  { name: "Trek Lead 2", role: "Trek Leader", icon: Mountain },
-  { name: "Media Head", role: "Media Head", icon: Camera },
+  { name: "Harshvardhan Mundada", role: "President", photo: harshPhoto },
+  { name: "Nirvan Bhagabati", role: "Trek Leader", photo: nirvanPhoto },
+  { name: "Vishesh Agarwal", role: "Trek Leader", photo: vishPhoto },
+  { name: "Param Patel", role: "Media Head", photo: paramPhoto },
 ];
 
 const managementTeam: TeamMember[] = [
-  { name: "Logistics Lead", role: "Logistics", team: "Management", icon: Package },
-  { name: "Training Lead", role: "Training", team: "Management", icon: Dumbbell },
-  { name: "Media Coordinator", role: "Media", team: "Management", icon: Camera },
-  { name: "Outreach Lead", role: "Outreach", team: "Management", icon: Megaphone },
+  { name: "Bhavit Bansal", role: "Management ", photo: bhavitPhoto },
+  { name: "Brunda SK", role: "Management", photo: brundaPhoto },
+  { name: "Nishant Maggirwar", role: "Management", photo: nishantPhoto },
+  { name: "Amogh Soma", role: "Management", photo: defaultPhoto },
+  { name: "Suryanath A", role: "Video Editing", photo: defaultPhoto },
+  { name: "Saum Abeer Khan", role: "Management", photo: saumPhoto },
+  { name: "Kanishk Daga", role: "Management", photo: kanishkPhoto },
+  { name: "Ojasvi Cheruku", role: "Management", photo: ojasviPhoto },
+  { name: "Mihir Kumar", role: "Design", photo: mihirPhoto },
+  { name: "Arnav Tuknait", role: "Management", photo: arnavPhoto },
+  { name: "Pasumarthi Vaishnavi", role: "Management", photo: vaishnaviPhoto },
 ];
 
 const Team = () => {
@@ -54,7 +75,7 @@ const Team = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Core Team
+              PoRs
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
               Our leadership team ensures every trek is safe, well-organized, and unforgettable.
@@ -67,8 +88,12 @@ const Team = () => {
                 key={member.role + index}
                 className="bg-card rounded-2xl p-6 text-center card-elevated card-hover"
               >
-                <div className="w-24 h-24 rounded-2xl bg-muted flex items-center justify-center mx-auto mb-4">
-                  <member.icon className="w-10 h-10 text-accent" />
+                <div className="w-40 h-40 rounded-2xl overflow-hidden bg-muted flex items-center justify-center mx-auto mb-4">
+                  <img
+                    src={member.photo}
+                    alt={`${member.name} photo`}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 <h3 className="font-heading font-semibold text-lg text-foreground mb-1">
                   {member.name}
@@ -87,7 +112,7 @@ const Team = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Management Team
+              Team Members
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
               Behind every successful trek is a dedicated team handling logistics, training, media, and outreach.
@@ -100,8 +125,12 @@ const Team = () => {
                 key={member.role + index}
                 className="bg-card rounded-2xl p-6 text-center card-elevated card-hover"
               >
-                <div className="w-20 h-20 rounded-xl bg-muted flex items-center justify-center mx-auto mb-4">
-                  <member.icon className="w-8 h-8 text-accent" />
+                <div className="w-32 h-32 rounded-xl overflow-hidden bg-muted flex items-center justify-center mx-auto mb-4">
+                  <img
+                    src={member.photo}
+                    alt={`${member.name} photo`}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 <h3 className="font-heading font-semibold text-lg text-foreground mb-1">
                   {member.name}

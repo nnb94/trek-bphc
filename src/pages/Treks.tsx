@@ -184,9 +184,74 @@ const Treks = () => {
         </div>
       </section>
 
-      {/* Trek Grid */}
+      {/* Upcoming Trek */}
+      <section className="section-padding bg-muted">
+        <div className="container mx-auto px-4">
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-8">
+              <span className="inline-block px-4 py-1.5 rounded-full bg-accent/10 text-accent text-sm font-semibold mb-4">
+                Upcoming Trek
+              </span>
+              <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground">
+                Rupin Pass
+              </h2>
+            </div>
+            
+            <div className="grid md:grid-cols-2 gap-8 items-center">
+              <div className="rounded-2xl overflow-hidden card-elevated">
+                <img
+                  src={rupinPassImg}
+                  alt="Rupin Pass Trek"
+                  className="w-full aspect-[4/3] object-cover"
+                  loading="lazy"
+                  width={1024}
+                  height={768}
+                />
+              </div>
+              
+              <div className="space-y-4">
+                <div className="flex flex-wrap gap-3">
+                  <span className="badge-difficulty badge-moderate">Moderate-Difficult</span>
+                </div>
+                <p className="text-muted-foreground leading-relaxed">
+                  Rupin Pass is one of the most stunning crossover treks in India, connecting Uttarakhand to Himachal Pradesh. 
+                  Known for its dramatic waterfalls, hanging villages, and snow bridges, this trek offers an unforgettable Himalayan experience.
+                </p>
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                    <MapPin className="w-4 h-4 text-accent" />
+                    Uttarakhand – Himachal
+                  </div>
+                  <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                    <TrendingUp className="w-4 h-4 text-accent" />
+                    15,350 ft
+                  </div>
+                  <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                    <Calendar className="w-4 h-4 text-accent" />
+                    May – Jun, Sep – Oct
+                  </div>
+                  <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                    <Mountain className="w-4 h-4 text-accent" />
+                    7 Days
+                  </div>
+                </div>
+                <div className="flex flex-wrap gap-2">
+                  {["Dramatic waterfalls", "Snow bridges", "Hanging villages", "Crossover trek"].map((h) => (
+                    <span key={h} className="px-3 py-1 rounded-full bg-accent/10 text-accent text-sm font-medium">{h}</span>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Past Treks Grid */}
       <section className="section-padding bg-background">
         <div className="container mx-auto px-4">
+          <h2 className="font-heading text-2xl md:text-3xl font-bold text-foreground mb-8 text-center">
+            Past Treks
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredTreks.map((trek) => (
               <div

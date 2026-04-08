@@ -8,6 +8,7 @@ import kedarkanthaImg from "@/assets/kedarkantha.jpeg";
 import brahmatalImg from "@/assets/brahmatal.jpeg";
 import valleyImg from "@/assets/valley-of-flowers.jpeg";
 import hamptaImg from "@/assets/hampta-pass.jpg";
+import rupinPassImg from "@/assets/rupin-pass.jpg";
 import BITSLogo from "@/assets/BITS_Pilani-Logo.png";
 
 const Index = () => {

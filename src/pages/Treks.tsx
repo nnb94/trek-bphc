@@ -12,6 +12,7 @@ import hamptaImg from "@/assets/hampta-pass.jpg";
 import sarPassImg from "@/assets/sar/sar4.jpeg";
 import kuariImg from "@/assets/kuari-pass.png";
 import bhriguImg from "@/assets/bhrigu-lake.jpeg";
+import rupinPassImg from "@/assets/rupin-pass.jpg";
 
 interface Trek {
   id: string;

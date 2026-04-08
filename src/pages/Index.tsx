@@ -144,8 +144,8 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-8">
-              <span className="inline-block px-4 py-1.5 rounded-full bg-accent/10 text-accent text-sm font-semibold mb-4">
-                Upcoming Trek
+              <span className="inline-block px-6 py-2.5 rounded-full bg-accent/10 text-accent text-lg font-semibold tracking-wide mb-4">
+                UPCOMING TREK
               </span>
               <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground">
                 Rupin Pass
@@ -169,33 +169,27 @@ const Index = () => {
                   <span className="badge-difficulty badge-moderate">Moderate-Difficult</span>
                 </div>
                 <p className="text-muted-foreground leading-relaxed">
-                  Rupin Pass is one of the most stunning crossover treks in India, connecting Uttarakhand to Himachal Pradesh. 
+                  Rupin Pass is one of the most stunning crossover treks in India. 
                   Known for its dramatic waterfalls, hanging villages, and snow bridges, this trek offers an unforgettable Himalayan experience.
                 </p>
                 <div className="grid grid-cols-2 gap-4">
                   <div className="flex items-center gap-2 text-sm text-muted-foreground">
                     <MapPin className="w-4 h-4 text-accent" />
-                    Uttarakhand – Himachal
+                    Himachal
                   </div>
                   <div className="flex items-center gap-2 text-sm text-muted-foreground">
                     <TrendingUp className="w-4 h-4 text-accent" />
-                    15,350 ft
+                    15,250 ft
                   </div>
                   <div className="flex items-center gap-2 text-sm text-muted-foreground">
                     <Calendar className="w-4 h-4 text-accent" />
-                    May – Jun, Sep – Oct
+                    May 23rd - May 28th
                   </div>
                   <div className="flex items-center gap-2 text-sm text-muted-foreground">
                     <Mountain className="w-4 h-4 text-accent" />
-                    7 Days
+                    6 Days
                   </div>
                 </div>
-                <Link to="/treks">
-                  <Button variant="outline" className="gap-2 mt-4">
-                    View Details
-                    <ArrowRight className="w-4 h-4" />
-                  </Button>
-                </Link>
               </div>
             </div>
           </div>

@@ -13,6 +13,7 @@ import sarPassImg from "@/assets/sar/sar4.jpeg";
 import kuariImg from "@/assets/kuari-pass.png";
 import bhriguImg from "@/assets/bhrigu-lake.jpeg";
 import rupinPassImg from "@/assets/rupin-pass.jpg";
+import { MessageCircle, FileText } from "lucide-react";
 
 interface Trek {
   id: string;
@@ -212,6 +213,24 @@ const Treks = () => {
                     <Mountain className="w-4 h-4 text-accent" />
                     6 Days
                   </div>
+                  {/* WhatsApp */}
+                  <a
+                    href="https://chat.whatsapp.com/I7Zrv6AxdeZKONFBc4zObA?mode=gi_t"
+                    target="_blank"
+                    className="flex items-center gap-2 text-sm text-muted-foreground hover:text-accent"
+                  >
+                    <MessageCircle className="w-4 h-4 text-accent" />
+                    WhatsApp Group
+                  </a>
+                  {/* Google Form */}
+                  <a
+                    href="https://forms.gle/M4UDP2nbBEFsQFjRA"
+                    target="_blank"
+                    className="flex items-center gap-2 text-sm text-muted-foreground hover:text-accent"
+                  >
+                    <FileText className="w-4 h-4 text-accent" />
+                    Register Here
+                  </a>
                 </div>
                 <div className="flex flex-wrap gap-2">
                   {["Dramatic waterfalls", "Snow bridges", "Hanging villages", "Crossover trek"].map((h) => (

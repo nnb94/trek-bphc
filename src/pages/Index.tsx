@@ -10,6 +10,7 @@ import valleyImg from "@/assets/valley-of-flowers.jpeg";
 import hamptaImg from "@/assets/hampta-pass.jpg";
 import rupinPassImg from "@/assets/rupin-pass.jpg";
 import BITSLogo from "@/assets/BITS_Pilani-Logo.png";
+import { MessageCircle, FileText } from "lucide-react";
 
 const Index = () => {
   const featuredTreks = [ 
@@ -175,7 +176,7 @@ const Index = () => {
                 <div className="grid grid-cols-2 gap-4">
                   <div className="flex items-center gap-2 text-sm text-muted-foreground">
                     <MapPin className="w-4 h-4 text-accent" />
-                    Himachal
+                    Himachal Pradesh
                   </div>
                   <div className="flex items-center gap-2 text-sm text-muted-foreground">
                     <TrendingUp className="w-4 h-4 text-accent" />
@@ -189,6 +190,24 @@ const Index = () => {
                     <Mountain className="w-4 h-4 text-accent" />
                     6 Days
                   </div>
+                  {/* WhatsApp */}
+                  <a
+                    href="https://chat.whatsapp.com/I7Zrv6AxdeZKONFBc4zObA?mode=gi_t"
+                    target="_blank"
+                    className="flex items-center gap-2 text-sm text-muted-foreground hover:text-accent"
+                  >
+                    <MessageCircle className="w-4 h-4 text-accent" />
+                    WhatsApp Group
+                  </a>
+                  {/* Google Form */}
+                  <a
+                    href="https://forms.gle/M4UDP2nbBEFsQFjRA"
+                    target="_blank"
+                    className="flex items-center gap-2 text-sm text-muted-foreground hover:text-accent"
+                  >
+                    <FileText className="w-4 h-4 text-accent" />
+                    Register Here
+                  </a>
                 </div>
               </div>
             </div>

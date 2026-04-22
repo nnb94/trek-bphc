@@ -17,9 +17,9 @@ const Fitness = () => {
 
   const weeklyPlan = [
     { week: "Week 1-2", focus: "Foundation", activities: "Light cardio, basic strength training, 2-3 km walks" },
-    { week: "Week 3-4", focus: "Build Up", activities: "Increase cardio intensity, add weights, 4-5 km walks with light pack" },
-    { week: "Week 5-6", focus: "Endurance", activities: "Long cardio sessions, strength circuits, 6-8 km hikes with pack" },
-    { week: "Week 7-8", focus: "Peak Training", activities: "High-intensity intervals, full strength routine, 10+ km hikes" },
+    { week: "Week 3-4", focus: "Build Up", activities: "Increase cardio intensity, 4-5 km walks/light jogs" },
+    { week: "Week 5-6", focus: "Endurance", activities: "Long cardio sessions, strength circuits, 3km/5km runs" },
+    { week: "Week 7-8", focus: "Peak Training", activities: "Strength routine and 5km run under desired time (depending on the trek) should be comfortable" },
   ];
 
   const safetyTips = [

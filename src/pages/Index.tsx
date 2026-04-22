@@ -209,6 +209,10 @@ const Index = () => {
                     Register Here
                   </a>
                 </div>
+                <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                    <Mountain className="w-4 h-4 text-accent" />
+                    5km in 35 mins
+                  </div>
               </div>
             </div>
           </div>

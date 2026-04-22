@@ -232,6 +232,10 @@ const Treks = () => {
                     Register Here
                   </a>
                 </div>
+                <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                    <Mountain className="w-4 h-4 text-accent" />
+                    5km in 35 mins
+                  </div>
                 <div className="flex flex-wrap gap-2">
                   {["Dramatic waterfalls", "Snow bridges", "Hanging villages", "Crossover trek"].map((h) => (
                     <span key={h} className="px-3 py-1 rounded-full bg-accent/10 text-accent text-sm font-medium">{h}</span>

@@ -28,12 +28,12 @@ const Essentials = () => {
     {
       icon: Footprints,
       title: "Trekking Shoes",
-      detail: "Ankle support, solid grip, water resistance. Break them in before the trek.",
+      detail: "Ankle support, solid grip, water resistance are desirable.",
     },
     {
       icon: Backpack,
       title: "50–60L Backpack",
-      detail: "With a rain cover. Padded straps and a hip belt are non-negotiable.",
+      detail: "Ensure you have rain cover, padded straps and a hip belt.",
     },
     {
       icon: Snowflake,
@@ -64,7 +64,7 @@ const Essentials = () => {
   const utility = [
     { title: "Toilet kit", detail: "Travel-size only. Toothbrush, paste, soap, tissues." },
     { title: "Steel lunch box, mug, spoon", detail: "Reusable. No plastic on the mountains." },
-    { title: "2L water capacity", detail: "Bottles or thermos. Hydrate constantly." },
+    { title: "2L water capacity", detail: "Bottles AND thermos. Hydrate constantly." },
     { title: "Plastic covers", detail: "Waterproof gear inside the bag and segregate wet/dry." },
   ];
 
@@ -89,15 +89,12 @@ const Essentials = () => {
         <div className="absolute inset-0 hero-overlay" />
         <div className="relative z-10 container mx-auto px-4 text-center pt-20">
           <div className="max-w-3xl mx-auto space-y-6 animate-fade-up">
-            <span className="inline-block px-4 py-1.5 rounded-full bg-accent/20 text-cream text-sm font-semibold backdrop-blur-sm border border-cream/20">
-              Week-long High-Altitude Trek
-            </span>
             <h1 className="font-heading text-4xl md:text-6xl font-bold text-cream">
               Himalayan Trek Essentials
             </h1>
             <p className="text-lg md:text-xl text-cream/85 italic max-w-2xl mx-auto">
-              "On a Himalayan trek, you carry only what you need —
-              not what you might need."
+              Carry only what you need —
+              not what you might need.
             </p>
           </div>
         </div>
@@ -133,7 +130,6 @@ const Essentials = () => {
               ))}
             </div>
 
-            <ProTip text="Buy your trekking shoes at least 2–3 weeks before the trek and walk in them daily. Stiff new shoes = guaranteed blisters." />
           </div>
         </div>
       </section>
@@ -149,37 +145,71 @@ const Essentials = () => {
               subtitle="Master the layering concept. Layer smart, don't overpack."
             />
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mt-10">
-              <div className="bg-card rounded-2xl p-6 card-elevated">
-                <h3 className="font-heading font-bold text-lg text-foreground mb-4">
-                  Base Clothing
-                </h3>
-                <ul className="space-y-3 text-sm">
-                  <ChecklistItem text="3 dry-fit T-shirts (no cotton — it stays wet)" />
-                  <ChecklistItem text="2 trek pants, quick-dry" />
-                  <ChecklistItem text="Fleece layer(s)" />
-                  <ChecklistItem text="Sweater" />
-                  <ChecklistItem text="Padded jacket (always)" />
-                  <ChecklistItem text="Thermals (winter only)" />
-                </ul>
-              </div>
+            <div className="bg-card rounded-2xl p-6 md:p-8 card-elevated mt-10 max-w-2xl mx-auto">
+              <ul className="space-y-4">
+                <li className="flex items-start gap-4 pb-4 border-b border-border">
+                  <div className="w-8 h-8 rounded-lg bg-accent/10 flex items-center justify-center flex-shrink-0">
+                    <Shirt className="w-4 h-4 text-accent" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-foreground">Dry-fit T-shirts</h4>
+                    <p className="text-sm text-muted-foreground mt-0.5">3 pieces (no cotton — it stays wet)</p>
+                  </div>
+                </li>
 
-              <div className="bg-card rounded-2xl p-6 card-elevated">
-                <h3 className="font-heading font-bold text-lg text-foreground mb-4">
-                  Layers by Season
-                </h3>
-                <div className="space-y-3">
-                  <SeasonRow season="Summer" layers="3 layers" tone="bg-amber-100 text-amber-800" />
-                  <SeasonRow season="Post-monsoon" layers="4 layers" tone="bg-blue-100 text-blue-800" />
-                  <SeasonRow season="Winter" layers="5 layers" tone="bg-slate-200 text-slate-800" />
-                </div>
-                <p className="text-xs text-muted-foreground mt-5 leading-relaxed">
-                  A layer = base + insulation + shell. Add or shed as the day changes — mornings are cold, afternoons can be sunny.
-                </p>
-              </div>
+                <li className="flex items-start gap-4 pb-4 border-b border-border">
+                  <div className="w-8 h-8 rounded-lg bg-accent/10 flex items-center justify-center flex-shrink-0">
+                    <Shirt className="w-4 h-4 text-accent" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-foreground">Trek Pants</h4>
+                    <p className="text-sm text-muted-foreground mt-0.5">2 pairs, quick-dry</p>
+                  </div>
+                </li>
+
+                <li className="flex items-start gap-4 pb-4 border-b border-border">
+                  <div className="w-8 h-8 rounded-lg bg-accent/10 flex items-center justify-center flex-shrink-0">
+                    <Shirt className="w-4 h-4 text-accent" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-foreground">Fleece Layers</h4>
+                    <p className="text-sm text-muted-foreground mt-0.5">Essential for insulation</p>
+                  </div>
+                </li>
+
+                <li className="flex items-start gap-4 pb-4 border-b border-border">
+                  <div className="w-8 h-8 rounded-lg bg-accent/10 flex items-center justify-center flex-shrink-0">
+                    <Shirt className="w-4 h-4 text-accent" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-foreground">Sweater</h4>
+                    <p className="text-sm text-muted-foreground mt-0.5">Optional extra warmth layer</p>
+                  </div>
+                </li>
+
+                <li className="flex items-start gap-4 pb-4 border-b border-border">
+                  <div className="w-8 h-8 rounded-lg bg-accent/10 flex items-center justify-center flex-shrink-0">
+                    <Shirt className="w-4 h-4 text-accent" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-foreground">Padded Jacket</h4>
+                    <p className="text-sm text-muted-foreground mt-0.5">Always carry</p>
+                  </div>
+                </li>
+
+                <li className="flex items-start gap-4 last:pb-0">
+                  <div className="w-8 h-8 rounded-lg bg-accent/10 flex items-center justify-center flex-shrink-0">
+                    <Shirt className="w-4 h-4 text-accent" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-foreground">Thermals</h4>
+                    <p className="text-sm text-muted-foreground mt-0.5">If required (cold treks)</p>
+                  </div>
+                </li>
+              </ul>
             </div>
 
-            <ProTip text="Cotton kills. It absorbs sweat, dries slowly, and can cause hypothermia at altitude. Stick to synthetics or merino." />
+            <ProTip text="Cotton kills. It absorbs sweat, dries slowly, and can cause hypothermia at altitude. Stick to synthetics." />
           </div>
         </div>
       </section>
@@ -246,7 +276,7 @@ const Essentials = () => {
               </ul>
             </div>
 
-            <ProTip text="Carry 4–5 zip-lock bags. They keep electronics dry, separate dirty clothes, and weigh almost nothing." />
+            <ProTip text="Carry zip-lock bags. They keep electronics dry, separate dirty clothes, and weigh almost nothing." />
           </div>
         </div>
       </section>
@@ -259,7 +289,8 @@ const Essentials = () => {
               number="05"
               icon={HeartPulse}
               title="Medical & Documents"
-              subtitle="Boring until you need them. Then they're everything."
+              subtitle="DISCLAIMER: This information is for general guidance only and is not a substitute for professional medical advice.
+"
             />
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mt-10">
@@ -323,7 +354,7 @@ const Essentials = () => {
                   First trek? Rent before you buy.
                 </h3>
                 <p className="text-muted-foreground mb-5 leading-relaxed">
-                  Padded jackets, trekking poles, gaiters, and rain ponchos can all be rented at base camp or in cities like Dehradun and Manali. Try the gear on a trek before investing in your own.
+                  Padded jackets, trekking poles, and rain ponchos can all be rented at base camp. Try the gear on a trek before investing in your own.
                 </p>
                 <Link to="/contact">
                   <Button variant="accent" className="gap-2">

@@ -136,9 +136,10 @@ const treks: Trek[] = [
 const Treks = () => {
   const [selectedTrek, setSelectedTrek] = useState<Trek | null>(null);
   const [filter, setFilter] = useState<string>("all");
+  const [bookOpen, setBookOpen] = useState(false);
 
-  const filteredTreks = filter === "all" 
-    ? treks 
+  const filteredTreks = filter === "all"
+    ? treks
     : treks.filter(trek => trek.difficulty === filter);
 
   return (
@@ -243,10 +244,14 @@ const Treks = () => {
                     <span key={h} className="px-3 py-1 rounded-full bg-accent/10 text-accent text-sm font-medium">{h}</span>
                   ))}
                 </div>
+                <Button onClick={() => setBookOpen(true)} variant="accent" size="lg" className="w-full md:w-auto mt-2">
+                  Book Your Slot
+                </Button>
               </div>
             </div>
           </div>
         </div>
+        <BookSlotDialog open={bookOpen} onOpenChange={setBookOpen} trekSlug="rupin-pass" trekName="Rupin Pass" />
       </section>
 
       {/* Filters */}
@@ -297,6 +302,9 @@ const Treks = () => {
                     }`}>
                       {trek.difficulty}
                     </span>
+                  </div>
+                  <div className="absolute top-4 right-4">
+                    <FavoriteButton trekSlug={trek.id} trekName={trek.name} />
                   </div>
                 </div>
                 

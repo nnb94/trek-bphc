@@ -312,7 +312,7 @@ const Gallery = () => {
                     </div>
                   )}
 
-                  {index < trekGalleries.length - 1 && (
+                  {index < allGalleries.length - 1 && (
                     <div className="mt-16 h-px bg-gradient-to-r from-transparent via-forest/30 to-transparent dark:via-cream/30"></div>
                   )}
                 </div>

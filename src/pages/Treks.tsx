@@ -4,6 +4,8 @@ import { Button } from "@/components/ui/button";
 import { MapPin, TrendingUp, Clock, Calendar, Mountain, ChevronRight, X } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import BookSlotDialog from "@/components/BookSlotDialog";
+import FavoriteButton from "@/components/FavoriteButton";
 import heroImg from "@/assets/hero-mountains.jpg";
 import kedarkanthaImg from "@/assets/kedarkantha.jpeg";
 import brahmatalImg from "@/assets/brahmatal.jpeg";

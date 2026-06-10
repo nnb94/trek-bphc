@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { supabase } from "@/integrations/supabase/client";
 import kedarkanthaImg from "@/assets/kedarkantha.jpeg";
 import kedarkanthaImg1 from "@/assets/kedarkantha/kedarkantha1.jpeg";
 import kedarkanthaImg2 from "@/assets/kedarkantha/kedarkantha2.jpeg";
@@ -195,6 +196,38 @@ const Gallery = () => {
     src: string;
     alt: string;
   } | null>(null);
+  const [dynamicGalleries, setDynamicGalleries] = useState<TrekGallery[]>([]);
+
+  useEffect(() => {
+    (async () => {
+      const { data } = await supabase
+        .from("gallery_photos")
+        .select("trek_name, image_url, caption, storage_path")
+        .order("created_at", { ascending: false });
+      if (!data) return;
+      const grouped = new Map<string, Array<{ src: string; alt: string }>>();
+      for (const p of data) {
+        let src = p.image_url;
+        if (p.storage_path) {
+          const { data: signed } = await supabase.storage.from("gallery").createSignedUrl(p.storage_path, 60 * 60);
+          if (signed?.signedUrl) src = signed.signedUrl;
+        }
+        const key = p.trek_name;
+        if (!grouped.has(key)) grouped.set(key, []);
+        grouped.get(key)!.push({ src, alt: p.caption ?? p.trek_name });
+      }
+      setDynamicGalleries(Array.from(grouped.entries()).map(([name, images]) => ({ name, images })));
+    })();
+  }, []);
+
+  const allGalleries = [...dynamicGalleries, ...trekGalleries];
+
+  useEffect(() => {
+    setOpenSections((prev) => {
+      if (prev.length === allGalleries.length) return prev;
+      return allGalleries.map((_, i) => prev[i] ?? false);
+    });
+  }, [allGalleries.length]);
 
   const toggleSection = (index: number) => {
     setOpenSections((prev) => {
@@ -233,7 +266,7 @@ const Gallery = () => {
           </h1>
 
           <div className="space-y-16">
-            {trekGalleries.map((trek, index) => {
+            {allGalleries.map((trek, index) => {
               const isOpen = openSections[index];
 
               return (
@@ -279,7 +312,7 @@ const Gallery = () => {
                     </div>
                   )}
 
-                  {index < trekGalleries.length - 1 && (
+                  {index < allGalleries.length - 1 && (
                     <div className="mt-16 h-px bg-gradient-to-r from-transparent via-forest/30 to-transparent dark:via-cream/30"></div>
                   )}
                 </div>

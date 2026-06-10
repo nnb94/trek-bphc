@@ -1,7 +1,9 @@
 import { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
-import { Menu, X } from "lucide-react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Menu, X, LogOut, LayoutDashboard, User as UserIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { useAuth } from "@/contexts/AuthContext";
+import { Button } from "@/components/ui/button";
 import TASLogo from '../assets/TAS_logo.png';
 
 
@@ -20,6 +22,13 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
+  const { user, signOut } = useAuth();
+
+  const handleSignOut = async () => {
+    await signOut();
+    navigate("/");
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -88,6 +97,25 @@ const Navbar = () => {
                 {link.name}
               </Link>
             ))}
+            {user ? (
+              <>
+                <Link to="/dashboard" title="Dashboard"
+                  className={cn("px-3 py-2 rounded-lg flex items-center gap-1 text-sm font-medium",
+                    scrolled ? "text-foreground hover:bg-muted" : "text-cream hover:bg-cream/10")}>
+                  <LayoutDashboard className="w-4 h-4" />
+                </Link>
+                <button onClick={handleSignOut} title="Sign out"
+                  className={cn("px-3 py-2 rounded-lg flex items-center gap-1 text-sm font-medium",
+                    scrolled ? "text-foreground hover:bg-muted" : "text-cream hover:bg-cream/10")}>
+                  <LogOut className="w-4 h-4" />
+                </button>
+              </>
+            ) : (
+              <Link to="/auth" className={cn("ml-2 px-4 py-2 rounded-lg text-sm font-semibold",
+                scrolled ? "bg-accent text-accent-foreground" : "bg-cream/20 text-cream backdrop-blur-sm hover:bg-cream/30")}>
+                Sign In
+              </Link>
+            )}
           </div>
 
           {/* Mobile Menu Button */}
@@ -133,6 +161,23 @@ const Navbar = () => {
                 {link.name}
               </Link>
             ))}
+            {user ? (
+              <>
+                <Link to="/dashboard" className={cn("px-4 py-3 rounded-lg font-medium flex items-center gap-2",
+                  scrolled ? "text-foreground hover:bg-background" : "text-cream hover:bg-cream/10")}>
+                  <LayoutDashboard className="w-4 h-4" />Dashboard
+                </Link>
+                <button onClick={handleSignOut} className={cn("px-4 py-3 rounded-lg font-medium flex items-center gap-2 text-left",
+                  scrolled ? "text-foreground hover:bg-background" : "text-cream hover:bg-cream/10")}>
+                  <LogOut className="w-4 h-4" />Sign Out
+                </button>
+              </>
+            ) : (
+              <Link to="/auth" className={cn("px-4 py-3 rounded-lg font-medium",
+                scrolled ? "bg-accent text-accent-foreground" : "bg-cream/20 text-cream")}>
+                Sign In
+              </Link>
+            )}
           </div>
         </div>
       </div>

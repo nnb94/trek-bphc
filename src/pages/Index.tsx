@@ -1,8 +1,10 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Mountain, Users, Award, Compass, ArrowRight, MapPin, TrendingUp, Calendar } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import BookSlotDialog from "@/components/BookSlotDialog";
 import heroImage from "@/assets/hero-mountains.jpg";
 import kedarkanthaImg from "@/assets/kedarkantha.jpeg";
 import brahmatalImg from "@/assets/brahmatal.jpeg";
@@ -13,6 +15,7 @@ import BITSLogo from "@/assets/BITS_Pilani-Logo.png";
 import { MessageCircle, FileText } from "lucide-react";
 
 const Index = () => {
+  const [bookOpen, setBookOpen] = useState(false);
   const featuredTreks = [ 
     {
       name: "Kedarkantha",
@@ -213,10 +216,14 @@ const Index = () => {
                     <Mountain className="w-4 h-4 text-accent" />
                     5km in 35 mins
                   </div>
+                <Button onClick={() => setBookOpen(true)} variant="accent" size="lg" className="mt-2">
+                  Book Your Slot
+                </Button>
               </div>
             </div>
           </div>
         </div>
+        <BookSlotDialog open={bookOpen} onOpenChange={setBookOpen} trekSlug="rupin-pass" trekName="Rupin Pass" />
       </section>
 
       {/* Featured Treks */}

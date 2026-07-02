@@ -7,7 +7,7 @@ Welcome to the documentation for **Trek BPHC**, a frontend web application acces
 
 ## 🚀 Overview
 
-Trek BPHC is a modern web application built with a focus on **fast development** and **clean UI**.  
+This is a modern web application for the Trekking & Adventure Society built with a focus on **fast development** and **clean UI**.  
 It leverages a robust JavaScript ecosystem to efficiently build scalable user interfaces.
 
 ---

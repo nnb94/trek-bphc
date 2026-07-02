@@ -1,6 +1,6 @@
-# Trek BPHC
+# TAS, BPHC
 
-Welcome to the documentation for **Trek BPHC**, a frontend web application accessible at:  
+Welcome to the documentation for the official website of **TAS, BPHC**, a frontend web application accessible at:  
 👉 https://trek-bphc.vercel.app
 
 ---
